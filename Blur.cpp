@@ -2,20 +2,18 @@
 
 namespace Pixel
 {
-
-    ///@summary: Empty constructor for the Blur object.
-    ///
     Blur::Blur()
     {
         //Construct Blur class
     }
-
-    ///@summary: Box blur the passed pixel buffer by a specified radius.
-    ///
-    ///@param: pixels
-    ///@param: length
-    ///@param: radius
-    ///@return: Pixels*
+    
+    /** 
+     * Box blur the passed pixel buffer by a specified radius.
+     *
+     * @param pixels The framebuffer to operate on.
+     * @param length The length of the framebuffer array.
+     * @param radius The radius of the blur.
+     */
     void Blur::Box(Color pixels[], int length, int radius)
     {
         //duplicate pixels to new array for operation
@@ -59,12 +57,14 @@ namespace Pixel
         }
     }
 
-    ///@summary: Gaussian blur the passed pixel buffer by a specified radius and with a specified spread.
-    ///
-    ///@param: pixels
-    ///@param: length
-    ///@param: radius
-    ///@param: spread
+    /** 
+     * Gaussian blur the passed pixel buffer by a specified radius and with a specified spread.
+     *
+     * @param pixels The framebuffer to operate on.
+     * @param length The length of the framebuffer array.
+     * @param radius The radius of the blur.
+     * @param spread The guassian spread of the blur.
+     */
     void Blur::Gaussian(Color pixels[], int length, int radius, float spread)
     {
         //duplicate pixels to new array for operation
